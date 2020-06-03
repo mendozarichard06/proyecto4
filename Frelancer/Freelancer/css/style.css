@@ -1,0 +1,147 @@
+:root {
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --oscuro: #212121;
+}
+
+html {
+    min-height: 100%;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Krub', sans-serif;
+    min-height: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    background-color: white;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h2,
+h3 {
+    text-align: center;
+}
+
+h3 {
+    color: var(--secundario);
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.site-header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .site-header nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.site-header nav a {
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.site-header nav a:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width:768px) {
+    .site-header nav a {
+        margin-bottom: 0;
+    }
+}
+
+.hero {
+    height: 45rem;
+    background-image: url(../img/hero.jpg);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contenedor-hero {
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.contenedor-hero i {
+    font-size: 5rem;
+    color: var(--primario);
+}
+
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 5rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+    font-weight: 700;
+    font-size: 2.2rem;
+    border-radius: .5rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 6px 7px 5px 0px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 6px 7px 5px 0px rgba(0, 0, 0, 0.49);
+    box-shadow: 6px 7px 5px 0px rgba(0, 0, 0, 0.49);
+}
+
+.servicios {
+    margin: 3rem auto;
+}
+
+@media (min-width:768px) {
+    .contenedor-servicios {
+        display: flex;
+    }
+}
